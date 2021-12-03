@@ -6,6 +6,11 @@ import java.util.Map;
 public class MobileStock {
     private Map<String, Mobile> mobileInfo = new HashMap<>();
 
+    public MobileStock() {
+        Mobile iphone = new Mobile("iphone","Apple",60000,5);
+        addMobile(iphone);
+    }
+
     public Boolean isMobileInStock(String modelName) {
         Mobile mobile = mobileInfo.get(modelName);
         return mobile != null && mobile.getStock()> 0;

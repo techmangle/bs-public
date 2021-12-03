@@ -11,6 +11,7 @@
   <modules>
     <module>mobile-service</module>
     <module>module-core</module>
+      <module>mobile-webapp</module>
   </modules>
 
   <name>mobile-stock-app</name>
