@@ -21,7 +21,7 @@ public class MobileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
         String modelName = req.getParameter("model");
         String mobileInfo = "";
-        if(mobileInfo == null)
+        if(modelName == null)
             mobileInfo = "Please specify model parameter..";
         else
             mobileInfo = mobileStock.getMobileInfo(modelName);
