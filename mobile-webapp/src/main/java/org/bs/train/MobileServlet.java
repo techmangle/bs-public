@@ -20,10 +20,11 @@ public class MobileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
         String modelName = req.getParameter("model");
-        String mobileInfo = mobileStock.getMobileInfo(modelName);
-        if(mobileInfo == null){
+        String mobileInfo = "";
+        if(mobileInfo == null)
             mobileInfo = "Please specify model parameter..";
-        }
+        else
+            mobileInfo = mobileStock.getMobileInfo(modelName);
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.print(mobileInfo.toString());
